@@ -10,9 +10,7 @@ module.exports.getUsers = async (req, res, next) => {
         }
         res.status(200).json({ success: true, data: users })
     }
-    catch (error) {
-        next(error)
-    }
+    catch (error) { next(error) }
 }
 
 // Create a new user
@@ -28,6 +26,7 @@ module.exports.postUser = async (req, res, next) => {
     }
     catch (error) { next(error) }
 }
+
 //update a user
 module.exports.updateUser = async (req, res, next) => {
     const { id } = req.params;
