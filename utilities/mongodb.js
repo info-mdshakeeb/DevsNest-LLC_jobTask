@@ -12,7 +12,7 @@ module.exports = {
             if (err || !db) {
                 return callback(err);
             }
-            dbConnection = db.db("tools");
+            dbConnection = db.db("test");
             console.log("Successfully connected to MongoDB.");
             return callback();
         });
